@@ -1,0 +1,135 @@
+2015-11-03 21:43:33
+
+
+Initializing configuration...
+
+
+Setting property defaults...
+Setting property: LogLocation=
+Setting property: LicenseKey=
+Setting property: UseSequentialThreading=False
+Setting property: UseExternalThreading=False
+
+
+Updating process-specific PATH for NMath native assembly loading...
+Prepending location to path: C:\WINDOWS\assembly\GAC_MSIL\NMath\5.2.0.0__873235918a322639
+Prepending location to path: C:\Program Files (x86)\CenterSpace\NMath 5.2\Assemblies
+Prepending location to path: C:\Program Files (x86)\CenterSpace\NMath 5.2\NMath Stats 3.5\Assemblies
+Prepending location to path: C:\Program Files (x86)\CenterSpace\NMath Stats 3.5\Assemblies
+Prepending location to path: C:\WINDOWS\assembly\GAC_MSIL\NMathStats\3.5.0.0__873235918a322639
+Prepending location to path: C:\Users\Gunnar\AppData\Local\CenterSpace Software
+Prepending location to path: C:\Program Files\CenterSpace\NMath 5.2\Assemblies
+Prepending location to path: C:\Program Files\CenterSpace\NMath Stats 3.5\Assemblies
+PATH=C:\Program Files\CenterSpace\NMath Stats 3.5\Assemblies;C:\Program Files\CenterSpace\NMath 5.2\Assemblies;C:\Users\Gunnar\AppData\Local\CenterSpace Software;C:\WINDOWS\assembly\GAC_MSIL\NMathStats\3.5.0.0__873235918a322639;C:\Program Files (x86)\CenterSpace\NMath Stats 3.5\Assemblies;C:\Program Files (x86)\CenterSpace\NMath 5.2\NMath Stats 3.5\Assemblies;C:\Program Files (x86)\CenterSpace\NMath 5.2\Assemblies;C:\WINDOWS\assembly\GAC_MSIL\NMath\5.2.0.0__873235918a322639;F:\Program Files (x86)\visualstudio2013\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries/x86;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\PHP\v5.6;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Intel\Services\IPT\;C:\Program Files (x86)\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared\;C:\Program Files (x86)\Roxio\OEM\AudioCore\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Java\jdk1.8.0_20;C:\Users\Gunnar\AppData\Local\Android\android-studio\sdk\platform-tools;C:\Ruby200-x64\bin;C:\Program Files\Mercurial;C:\Users\Gunnar\AppData\Roaming\npm;C:\Program Files (x86)\Common Files\Teleca Shared;C:\Program Files (x86)\Intuwave\Shared\mRouterRuntime;C:\mysql\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files (x86)\Skype\Phone\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\Gunnar\.dnx\bin;C:\Ruby200-x64\bin;C:\Program Files\Mercurial;C:\Users\Gunnar\AppData\Roaming\npm;F:\Program Files (x86)\visualstudio2013\Common7\IDE\Extensions\Microsoft\VsGraphics
+
+
+Updating properties from environment variables...
+Checking environment variable NMATH_LOG_LOCATION...
+Checking environment variable NMATH_LICENSE_KEY...
+Checking environment variable NMATH_NATIVE_LOCATION...
+Checking environment variable NMATH_USE_SEQUENTIAL_THREADING...
+Checking environment variable NMATH_USE_EXTERNAL_THREADING...
+
+
+Updating properties from configuration app settings...
+Checking configuration app setting NMathLogLocation...
+Checking configuration app setting NMathLicenseKey...
+Checking configuration app setting NMathNativeLocation...
+Checking configuration app setting NMathUseSequentialThreading...
+Checking configuration app setting NMathUseExternalThreading...
+
+
+Initialization complete.
+
+
+************************************************************************
+
+
+Loading NMath license....
+No key specified in NMathConfiguration. Checking registry.
+Found key in registry: XTUU-3USK-MLK4-CW29-0AUV-VUUF-1QS1-WPUF-19SU-WPMA-TVDF-YP0T-FRPP-X8NS-WQSF-E842-E8SL-V8UF-D8SV-19SD-QD2G-YQM3-73AU
+Checking if license key is better than eval license key...
+OK
+Updating NMath 5.2 license object...
+Setting Key = XTUU-3USK-MLK4-CW29-0AUV-VUUF-1QS1-WPUF-19SU-WPMA-TVDF-YP0T-FRPP-X8NS-WQSF-E842-E8SL-V8UF-D8SV-19SD-QD2G-YQM3-73AU
+Setting Seats = 1
+Setting HasSource = False
+Setting IsEnabled = True
+Setting IsEval = False
+Setting Maintenance Expiration = mars 23, 2013
+Setting LicenseExpiration = [None]
+License updated:
+============================================
+NMath 5.2
+Enabled: True
+Installed: True
+Seats = 1
+Source Code = False
+Maintenance Expiration = mars 23, 2013
+License Expiration: [None]
+============================================
+
+
+
+Loading NMath Stats license....
+No key specified in NMathConfiguration. Checking registry.
+Found key in registry: XTUU-3USK-MLK4-CW29-0AUV-VUUF-1QS1-WPUF-19SU-WPMA-TVDF-YP0T-FRPP-X8NS-WQSF-E842-E8SL-V8UF-D8SV-19SD-QD2G-YQM3-73AU
+Checking if license key is better than eval license key...
+OK
+Updating NMath Stats 3.5 license object...
+Setting Key = XTUU-3USK-MLK4-CW29-0AUV-VUUF-1QS1-WPUF-19SU-WPMA-TVDF-YP0T-FRPP-X8NS-WQSF-E842-E8SL-V8UF-D8SV-19SD-QD2G-YQM3-73AU
+Setting Seats = 1
+Setting HasSource = False
+Setting IsEnabled = True
+Setting IsEval = False
+Setting Maintenance Expiration = mars 23, 2013
+Setting LicenseExpiration = [None]
+License updated:
+============================================
+NMath Stats 3.5
+Enabled: True
+Installed: True
+Seats = 1
+Source Code = False
+Maintenance Expiration = mars 23, 2013
+License Expiration: [None]
+============================================
+
+
+
+Checking NMath Stats 3.5 license...
+License valid.
+
+
+Setting property: LogLocation=F:\Documents\GitHub\SireusMvc5\SireusMvc5\Upload
+Starting log file at F:\Documents\GitHub\SireusMvc5\SireusMvc5\Upload\NMathConfiguration.log...
+
+
+
+Checking PATH for NMath native library...
+[Windows only] Linux and Mac users should set the library path environment variable (LD_LIBRARY_PATH or DYLD_LIBRARY_PATH, respectively) to include the location of the NMath native library.
+Determining native library name...
+Property, platform=x86
+Property, UseSequentialThreading=False
+Property, UseExternalThreading=False
+Using native library name: nmath_native_x86
+Testing C:\Program Files\CenterSpace\NMath Stats 3.5\Assemblies\nmath_native_x86.dll...
+Testing C:\Program Files\CenterSpace\NMath 5.2\Assemblies\nmath_native_x86.dll...
+Testing C:\Users\Gunnar\AppData\Local\CenterSpace Software\nmath_native_x86.dll...
+Testing C:\WINDOWS\assembly\GAC_MSIL\NMathStats\3.5.0.0__873235918a322639\nmath_native_x86.dll...
+Testing C:\Program Files (x86)\CenterSpace\NMath Stats 3.5\Assemblies\nmath_native_x86.dll...
+Testing C:\Program Files (x86)\CenterSpace\NMath 5.2\NMath Stats 3.5\Assemblies\nmath_native_x86.dll...
+Testing C:\Program Files (x86)\CenterSpace\NMath 5.2\Assemblies\nmath_native_x86.dll...
+Native library found.
+
+
+Loading NMath kernel...
+Determining kernel assembly name...
+Property, platform=x86
+Property, UseSequentialThreading=False
+Property, UseExternalThreading=False
+Using kernel assembly name: NMathKernelx86
+Trying to load kernel by fully qualified name NMathKernelx86, Version=5.2.0.0, Culture=neutral, PublicKeyToken=873235918A322639...
+Kernel loaded.
+
+

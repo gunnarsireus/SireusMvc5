@@ -1,0 +1,103 @@
+﻿<table style="width: 100%">
+    <tr>
+        <td style="color: #0000FF; font-size: small; font-weight: 700; width: 28%;" align="right">
+            @Html.Raw("<strong>Lager (50%):</strong>&nbsp;")
+        </td>
+        <td style="width: 15%;" align="left">
+            <div id="divStock">
+                <span style="color: #0000FF; font-size: small; font-weight: 700;">
+                    @ViewData["Stock"]
+                </span>
+
+            </div>
+        </td>
+        <td style="font-size: small; font-weight: 700; width: 20%;" align="right">
+            @Html.Raw("<strong>Marginal:</strong>&nbsp;")
+        </td>
+        <td style="width: 15%;" align="left">
+            <div id="divSafety">
+                <span style="color: #FF0066; font-size: small; font-weight: 700;">
+                    @ViewData["Safety"]
+                </span>
+            </div>
+        </td>
+        <td align="right" style="width: 10%;"></td>
+        <td align="left" style="width: 12%;"></td>
+    </tr>
+    <tr>
+        <td style="font-size: small; font-weight: 700; width: 28%;" align="right">
+            @Html.Raw("<strong>Falerade:</strong> &nbsp;")
+        </td>
+        <td style="width: 15%" align="left">
+            <div id="divFailed">
+                <span style="color: #FF0066; font-size: small; font-weight: 700;">
+                    @ViewData["Failed"]
+                </span>
+            </div>
+        </td>
+        <td style="color: #FF00FF; font-size: small; font-weight: 700; width: 20%;" align="right">
+            @Html.Raw("<strong>Reparerade:</strong>&nbsp;")
+        </td>
+        <td style="width: 10%" align="left">
+            <div id="divRepaired">
+                <span style="color: #FF00FF; font-size: small; font-weight: 700;">
+                    @ViewData["Repaired"]
+                </span>
+            </div>
+        </td>
+        <td style="color: #FF00FF; font-size: small; font-weight: 700; width: 10%;" align="right">
+            @Html.Raw("<strong>Förlorade:</strong>&nbsp;")
+        </td>
+        <td style="width: 17%" align="left">
+            <div id="divLost">
+                <span style="color: #FF00FF; font-size: small; font-weight: 700;">
+                    @ViewData["Lost"]
+                </span>
+            </div>
+        </td>
+    </tr>
+</table>
+<table style="width: 100%">
+    <tr>
+        <td style="color: #0000FF; font-size: small; font-weight: 700; width: 10%;" align="right"></td>
+        <td style="width: 15%;" align="left" colspan="4">
+            <div id="divInfoText">
+                <span style="color: #0000FF; font-size: small; font-weight: 700;">
+                    @ViewData["InfoText"]
+                </span>
+            </div>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="color: #FF00FF; font-size: small; font-weight: 700; width: 28%;" align="right">
+            @Html.Raw("<Strong>Totallager:</strong>&nbsp;")
+        </td>
+        <td align="left" style="width: 25%;">
+            <div>
+                <span style="align-content: flex-end; color: #ff0066; font-size: small; font-weight: 700;">
+                    @ViewData["Total"]
+                </span>
+            </div>
+        </td>
+        <td align="left">
+            <div>
+                <span style="color: #FF0066; font-size: small; font-weight: 700;">
+                    @Html.Raw("<strong>Servicedagar:</strong> ")@ViewData["ServiceDays"]
+                </span>
+            </div>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<div id="divInput">
+    @Html.Partial("_Input")
+</div>
+<div id="divChart">
+    @Html.Partial("_Chart")
+</div>
