@@ -211,6 +211,11 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-touch-carousel\dist\css\bootstrap-touch-carousel.css" />
+    <Content Include="Content\bootstrap-touch-carousel\dist\js\bootstrap-touch-carousel.js" />
+    <Content Include="Content\bootstrap-touch-carousel\Gruntfile.js" />
+    <Content Include="Content\bootstrap-touch-carousel\src\js\touch-carousel.js" />
+    <Content Include="Content\bootstrap-touch-carousel\src\js\transition.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\ColumnsOfSameHeight.css" />
@@ -231,6 +236,10 @@
     <Content Include="Content\Images\album-r4.gif" />
     <Content Include="Content\Images\album-rstretch.gif" />
     <Content Include="Content\Images\album-tstretch.gif" />
+    <Content Include="Content\Images\ASP-NET-Banners-01.png" />
+    <Content Include="Content\Images\ASP-NET-Banners-02.png" />
+    <Content Include="Content\Images\Banner-01-Azure.png" />
+    <Content Include="Content\Images\Banner-02-VS.png" />
     <Content Include="Content\Images\body-repeat_template.jpg" />
     <Content Include="Content\Images\BootstrapFooterComposed.jpg" />
     <Content Include="Content\Images\BootstrapHeaderComposed.jpg" />
@@ -310,6 +319,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\bootstrap-touch-carousel\.bower.json" />
+    <Content Include="Content\bootstrap-touch-carousel\bower.json" />
+    <Content Include="Content\bootstrap-touch-carousel\CHANGELOG.md" />
+    <Content Include="Content\bootstrap-touch-carousel\LICENSE-MIT" />
+    <Content Include="Content\bootstrap-touch-carousel\package.json" />
+    <Content Include="Content\bootstrap-touch-carousel\README.md" />
+    <Content Include="Content\bootstrap-touch-carousel\src\less\carousel.less" />
+    <Content Include="Content\bootstrap-touch-carousel\src\less\elements.less" />
     <None Include="Properties\PublishProfiles\sireus - FTP.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -398,7 +415,7 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\ui\.jshintrc" />
-    <Content Include="Views\SQL\Index.cshtml" />
+    <Content Include="Views\Sql\Index.cshtml" />
     <Content Include="Views\Ltb\Index.cshtml" />
     <Content Include="Views\Ltb\_Chart.cshtml" />
     <Content Include="Views\Ltb\_Input.cshtml" />
