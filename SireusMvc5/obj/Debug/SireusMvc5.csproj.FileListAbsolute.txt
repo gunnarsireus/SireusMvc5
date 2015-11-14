@@ -110,3 +110,8 @@ F:\Documents\GitHub\SireusMvc5\SireusMvc5\obj\Debug\SireusMvc5.dll
 F:\Documents\GitHub\SireusMvc5\SireusMvc5\obj\Debug\SireusMvc5.pdb
 F:\Documents\GitHub\SireusMvc5\SireusMvc5\bin\LTBCore.dll
 F:\Documents\GitHub\SireusMvc5\SireusMvc5\bin\LTBCore.pdb
+F:\Documents\GitHub\SireusMvc5\SireusMvc5\bin\NMath.dll
+F:\Documents\GitHub\SireusMvc5\SireusMvc5\bin\NMathKernelx86.dll
+F:\Documents\GitHub\SireusMvc5\SireusMvc5\bin\NMathStats.dll
+F:\Documents\GitHub\SireusMvc5\SireusMvc5\bin\NMath.xml
+F:\Documents\GitHub\SireusMvc5\SireusMvc5\bin\nmath_native_x86.dll
