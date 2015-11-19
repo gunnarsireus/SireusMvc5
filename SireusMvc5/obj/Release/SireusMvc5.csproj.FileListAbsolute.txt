@@ -59,3 +59,4 @@ F:\Documents\GitHub\SireusMvc5\SireusMvc5\obj\Release\SireusMvc5.pdb
 F:\Documents\GitHub\SireusMvc5\SireusMvc5\bin\NMathStats.dll
 F:\Documents\GitHub\SireusMvc5\SireusMvc5\bin\NMathKernelx86.dll
 F:\Documents\GitHub\SireusMvc5\SireusMvc5\bin\nmath_native_x86.dll
+F:\Documents\GitHub\SireusMvc5\SireusMvc5\obj\Release\SireusMvc5.csprojResolveAssemblyReference.cache
