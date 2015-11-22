@@ -1,11 +1,11 @@
-﻿using System;
+﻿using LTBCore;
+using Microsoft.VisualBasic;
+using SireusMvc5.Models;
+using System;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Web.Mvc;
-using LTBCore;
-using Microsoft.VisualBasic;
-using SireusMvc5.Models;
 
 namespace SireusMvc5.Controllers
 {
@@ -16,12 +16,12 @@ namespace SireusMvc5.Controllers
         private static readonly double[] RepairLossPerYear = new double[LtbCommon.MaxYear + 1];
         private static readonly int[] RegionalStocksPerYear = new int[LtbCommon.MaxYear + 1];
 
-        private static string _stock;
-        private static string _safety;
-        private static string _failed;
-        private static string _repaired;
-        private static string _lost;
-        private static string _total;
+        private static string _stock = string.Empty;
+        private static string _safety = string.Empty;
+        private static string _failed = string.Empty;
+        private static string _repaired = string.Empty;
+        private static string _lost = string.Empty;
+        private static string _total = string.Empty;
         private static MemoryStream _ltbChart;
 
         private static double _confidenceLevelConverted;
@@ -71,11 +71,11 @@ namespace SireusMvc5.Controllers
                     return
                         Convert.ToInt32(
                             (DateTimeUtil.DateDiff(DateTimeUtil.DateInterval.Day, LifeTimeBuy, EndOfService) +
-                             CountLeaps(LifeTimeBuy.Year) - CountLeaps(EndOfService.Year) - 2)/365);
+                             CountLeaps(LifeTimeBuy.Year) - CountLeaps(EndOfService.Year) - 2) / 365);
                 }
                 return
                     Convert.ToInt32((DateTimeUtil.DateDiff(DateTimeUtil.DateInterval.Day, LifeTimeBuy, EndOfService) +
-                                     CountLeaps(LifeTimeBuy.Year) - CountLeaps(EndOfService.Year) - 1)/365);
+                                     CountLeaps(LifeTimeBuy.Year) - CountLeaps(EndOfService.Year) - 1) / 365);
             }
         }
 
@@ -247,13 +247,13 @@ namespace SireusMvc5.Controllers
                         ViewData["IB0TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["RS0TabIndex"] = _tabidx + nbrOfServiceYears;
-                        ViewData["FR0TabIndex"] = _tabidx + 2*nbrOfServiceYears;
-                        ViewData["RL0TabIndex"] = _tabidx + 3*nbrOfServiceYears;
+                        ViewData["FR0TabIndex"] = _tabidx + 2 * nbrOfServiceYears;
+                        ViewData["RL0TabIndex"] = _tabidx + 3 * nbrOfServiceYears;
                         ViewData["IB1TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["RS1TabIndex"] = _tabidx + nbrOfServiceYears;
-                        ViewData["FR1TabIndex"] = _tabidx + 2*nbrOfServiceYears;
-                        ViewData["RL1TabIndex"] = _tabidx + 3*nbrOfServiceYears;
+                        ViewData["FR1TabIndex"] = _tabidx + 2 * nbrOfServiceYears;
+                        ViewData["RL1TabIndex"] = _tabidx + 3 * nbrOfServiceYears;
                         ViewData["IB1Disabled"] = string.Empty;
                         ViewData["RS1Disabled"] = string.Empty;
                         ViewData["FR1Disabled"] = string.Empty;
@@ -270,8 +270,8 @@ namespace SireusMvc5.Controllers
                         ViewData["IB2TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["RS2TabIndex"] = _tabidx + nbrOfServiceYears;
-                        ViewData["FR2TabIndex"] = _tabidx + 2*nbrOfServiceYears;
-                        ViewData["RL2TabIndex"] = _tabidx + 3*nbrOfServiceYears;
+                        ViewData["FR2TabIndex"] = _tabidx + 2 * nbrOfServiceYears;
+                        ViewData["RL2TabIndex"] = _tabidx + 3 * nbrOfServiceYears;
                         ViewData["IB2Disabled"] = string.Empty;
                         ViewData["RS2Disabled"] = string.Empty;
                         ViewData["FR2Disabled"] = string.Empty;
@@ -288,8 +288,8 @@ namespace SireusMvc5.Controllers
                         ViewData["IB3TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["RS3TabIndex"] = _tabidx + nbrOfServiceYears;
-                        ViewData["FR3TabIndex"] = _tabidx + 2*nbrOfServiceYears;
-                        ViewData["RL3TabIndex"] = _tabidx + 3*nbrOfServiceYears;
+                        ViewData["FR3TabIndex"] = _tabidx + 2 * nbrOfServiceYears;
+                        ViewData["RL3TabIndex"] = _tabidx + 3 * nbrOfServiceYears;
                         ViewData["IB3Disabled"] = string.Empty;
                         ViewData["RS3Disabled"] = string.Empty;
                         ViewData["FR3Disabled"] = string.Empty;
@@ -306,8 +306,8 @@ namespace SireusMvc5.Controllers
                         ViewData["IB4TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["RS4TabIndex"] = _tabidx + nbrOfServiceYears;
-                        ViewData["FR4TabIndex"] = _tabidx + 2*nbrOfServiceYears;
-                        ViewData["RL4TabIndex"] = _tabidx + 3*nbrOfServiceYears;
+                        ViewData["FR4TabIndex"] = _tabidx + 2 * nbrOfServiceYears;
+                        ViewData["RL4TabIndex"] = _tabidx + 3 * nbrOfServiceYears;
                         ViewData["IB4Disabled"] = string.Empty;
                         ViewData["RS4Disabled"] = string.Empty;
                         ViewData["FR4Disabled"] = string.Empty;
@@ -324,8 +324,8 @@ namespace SireusMvc5.Controllers
                         ViewData["IB5TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["RS5TabIndex"] = _tabidx + nbrOfServiceYears;
-                        ViewData["FR5TabIndex"] = _tabidx + 2*nbrOfServiceYears;
-                        ViewData["RL5TabIndex"] = _tabidx + 3*nbrOfServiceYears;
+                        ViewData["FR5TabIndex"] = _tabidx + 2 * nbrOfServiceYears;
+                        ViewData["RL5TabIndex"] = _tabidx + 3 * nbrOfServiceYears;
                         ViewData["IB5Disabled"] = string.Empty;
                         ViewData["RS5Disabled"] = string.Empty;
                         ViewData["FR5Disabled"] = string.Empty;
@@ -342,8 +342,8 @@ namespace SireusMvc5.Controllers
                         ViewData["IB6TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["RS6TabIndex"] = _tabidx + nbrOfServiceYears;
-                        ViewData["FR6TabIndex"] = _tabidx + 2*nbrOfServiceYears;
-                        ViewData["RL6TabIndex"] = _tabidx + 3*nbrOfServiceYears;
+                        ViewData["FR6TabIndex"] = _tabidx + 2 * nbrOfServiceYears;
+                        ViewData["RL6TabIndex"] = _tabidx + 3 * nbrOfServiceYears;
                         ViewData["IB6Disabled"] = string.Empty;
                         ViewData["RS6Disabled"] = string.Empty;
                         ViewData["FR6Disabled"] = string.Empty;
@@ -360,8 +360,8 @@ namespace SireusMvc5.Controllers
                         ViewData["IB7TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["RS7TabIndex"] = _tabidx + nbrOfServiceYears;
-                        ViewData["FR7TabIndex"] = _tabidx + 2*nbrOfServiceYears;
-                        ViewData["RL7TabIndex"] = _tabidx + 3*nbrOfServiceYears;
+                        ViewData["FR7TabIndex"] = _tabidx + 2 * nbrOfServiceYears;
+                        ViewData["RL7TabIndex"] = _tabidx + 3 * nbrOfServiceYears;
                         ViewData["IB7Disabled"] = string.Empty;
                         ViewData["RS7Disabled"] = string.Empty;
                         ViewData["FR7Disabled"] = string.Empty;
@@ -378,8 +378,8 @@ namespace SireusMvc5.Controllers
                         ViewData["IB8TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["RS8TabIndex"] = _tabidx + nbrOfServiceYears;
-                        ViewData["FR8TabIndex"] = _tabidx + 2*nbrOfServiceYears;
-                        ViewData["RL8TabIndex"] = _tabidx + 3*nbrOfServiceYears;
+                        ViewData["FR8TabIndex"] = _tabidx + 2 * nbrOfServiceYears;
+                        ViewData["RL8TabIndex"] = _tabidx + 3 * nbrOfServiceYears;
                         ViewData["IB8Disabled"] = string.Empty;
                         ViewData["RS8Disabled"] = string.Empty;
                         ViewData["FR8Disabled"] = string.Empty;
@@ -396,8 +396,8 @@ namespace SireusMvc5.Controllers
                         ViewData["IB9TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["RS9TabIndex"] = _tabidx + nbrOfServiceYears;
-                        ViewData["FR9TabIndex"] = _tabidx + 2*nbrOfServiceYears;
-                        ViewData["RL9TabIndex"] = _tabidx + 3*nbrOfServiceYears;
+                        ViewData["FR9TabIndex"] = _tabidx + 2 * nbrOfServiceYears;
+                        ViewData["RL9TabIndex"] = _tabidx + 3 * nbrOfServiceYears;
                         ViewData["IB9Disabled"] = string.Empty;
                         ViewData["RS9Disabled"] = string.Empty;
                         ViewData["FR9Disabled"] = string.Empty;
@@ -410,7 +410,7 @@ namespace SireusMvc5.Controllers
                 yearCnt += 1;
             }
 
-            _tabidx += 1 + 4*nbrOfServiceYears;
+            _tabidx += 1 + 4 * nbrOfServiceYears;
             switch (nbrOfServiceYears)
             {
                 case 0:
@@ -426,7 +426,7 @@ namespace SireusMvc5.Controllers
                     ViewData["IB8ForeColor"] = "red40";
                     ViewData["IB9ForeColor"] = "red40";
                     ViewData["IB10ForeColor"] = "red40";
-                    ViewData["IB1TabIndex"] = _tabidx + 3*nbrOfServiceYears + 1;
+                    ViewData["IB1TabIndex"] = _tabidx + 3 * nbrOfServiceYears + 1;
                     break;
                 case 1:
                     ViewData["IB2"] = "EoS";
@@ -440,7 +440,7 @@ namespace SireusMvc5.Controllers
                     ViewData["IB8ForeColor"] = "red40";
                     ViewData["IB9ForeColor"] = "red40";
                     ViewData["IB10ForeColor"] = "red40";
-                    ViewData["IB2TabIndex"] = _tabidx + 3*nbrOfServiceYears + 1;
+                    ViewData["IB2TabIndex"] = _tabidx + 3 * nbrOfServiceYears + 1;
                     break;
                 case 2:
                     ViewData["IB3"] = "EoS";
@@ -453,7 +453,7 @@ namespace SireusMvc5.Controllers
                     ViewData["IB8ForeColor"] = "red40";
                     ViewData["IB9ForeColor"] = "red40";
                     ViewData["IB10ForeColor"] = "red40";
-                    ViewData["IB3TabIndex"] = _tabidx + 3*nbrOfServiceYears + 1;
+                    ViewData["IB3TabIndex"] = _tabidx + 3 * nbrOfServiceYears + 1;
                     break;
                 case 3:
                     ViewData["IB4"] = "EoS";
@@ -465,7 +465,7 @@ namespace SireusMvc5.Controllers
                     ViewData["IB8ForeColor"] = "red40";
                     ViewData["IB9ForeColor"] = "red40";
                     ViewData["IB10ForeColor"] = "red40";
-                    ViewData["IB4TabIndex"] = _tabidx + 3*nbrOfServiceYears + 1;
+                    ViewData["IB4TabIndex"] = _tabidx + 3 * nbrOfServiceYears + 1;
                     break;
                 case 4:
                     ViewData["IB5"] = "EoS";
@@ -476,7 +476,7 @@ namespace SireusMvc5.Controllers
                     ViewData["IB8ForeColor"] = "red40";
                     ViewData["IB9ForeColor"] = "red40";
                     ViewData["IB10ForeColor"] = "red40";
-                    ViewData["IB5TabIndex"] = _tabidx + 3*nbrOfServiceYears + 1;
+                    ViewData["IB5TabIndex"] = _tabidx + 3 * nbrOfServiceYears + 1;
                     break;
                 case 5:
                     ViewData["IB6"] = "EoS";
@@ -486,7 +486,7 @@ namespace SireusMvc5.Controllers
                     ViewData["IB8ForeColor"] = "red40";
                     ViewData["IB9ForeColor"] = "red40";
                     ViewData["IB10ForeColor"] = "red40";
-                    ViewData["IB6TabIndex"] = _tabidx + 3*nbrOfServiceYears + 1;
+                    ViewData["IB6TabIndex"] = _tabidx + 3 * nbrOfServiceYears + 1;
                     break;
                 case 6:
                     ViewData["IB7"] = "EoS";
@@ -495,7 +495,7 @@ namespace SireusMvc5.Controllers
                     ViewData["IB8ForeColor"] = "red40";
                     ViewData["IB9ForeColor"] = "red40";
                     ViewData["IB10ForeColor"] = "red40";
-                    ViewData["IB7TabIndex"] = _tabidx + 3*nbrOfServiceYears + 1;
+                    ViewData["IB7TabIndex"] = _tabidx + 3 * nbrOfServiceYears + 1;
                     break;
                 case 7:
                     ViewData["IB8"] = "EoS";
@@ -503,23 +503,23 @@ namespace SireusMvc5.Controllers
                     ViewData["IB8ForeColor"] = "red40";
                     ViewData["IB9ForeColor"] = "red40";
                     ViewData["IB10ForeColor"] = "red40";
-                    ViewData["IB8TabIndex"] = _tabidx + 3*nbrOfServiceYears + 1;
+                    ViewData["IB8TabIndex"] = _tabidx + 3 * nbrOfServiceYears + 1;
                     break;
                 case 8:
                     ViewData["IB9"] = "EoS";
 
                     ViewData["IB9ForeColor"] = "red40";
                     ViewData["IB10ForeColor"] = "red40";
-                    ViewData["IB9TabIndex"] = _tabidx + 3*nbrOfServiceYears + 1;
+                    ViewData["IB9TabIndex"] = _tabidx + 3 * nbrOfServiceYears + 1;
                     break;
                 case 9:
                     ViewData["IB10"] = "EoS";
 
                     ViewData["IB10ForeColor"] = "red40";
-                    ViewData["IB10TabIndex"] = _tabidx + 3*nbrOfServiceYears + 1;
+                    ViewData["IB10TabIndex"] = _tabidx + 3 * nbrOfServiceYears + 1;
                     break;
                 case 10:
-                    ViewData["IB10TabIndex"] = _tabidx + 3*nbrOfServiceYears + 1;
+                    ViewData["IB10TabIndex"] = _tabidx + 3 * nbrOfServiceYears + 1;
                     break;
             }
             _tabidx = 0;
@@ -899,7 +899,7 @@ namespace SireusMvc5.Controllers
                         InstalledBasePerYear[0] = Convert.ToInt32(ViewData["IB0"].ToString());
                         RegionalStocksPerYear[0] = Convert.ToInt32(ViewData["RS0"].ToString());
                         FailureRatePerYear[0] = Convert.ToDouble(ViewData["FR0"].ToString());
-                        RepairLossPerYear[0] = Convert.ToDouble(Convert.ToDouble(ViewData["RL0"].ToString())/100);
+                        RepairLossPerYear[0] = Convert.ToDouble(Convert.ToDouble(ViewData["RL0"].ToString()) / 100);
 
                         break;
                     case 1:
@@ -907,7 +907,7 @@ namespace SireusMvc5.Controllers
                         InstalledBasePerYear[1] = Convert.ToInt32(ViewData["IB1"].ToString());
                         RegionalStocksPerYear[1] = Convert.ToInt32(ViewData["RS1"].ToString());
                         FailureRatePerYear[1] = Convert.ToDouble(ViewData["FR1"].ToString());
-                        RepairLossPerYear[1] = Convert.ToDouble(Convert.ToDouble(ViewData["RL1"].ToString())/100);
+                        RepairLossPerYear[1] = Convert.ToDouble(Convert.ToDouble(ViewData["RL1"].ToString()) / 100);
 
                         break;
                     case 2:
@@ -915,7 +915,7 @@ namespace SireusMvc5.Controllers
                         InstalledBasePerYear[2] = Convert.ToInt32(ViewData["IB2"].ToString());
                         RegionalStocksPerYear[2] = Convert.ToInt32(ViewData["RS2"].ToString());
                         FailureRatePerYear[2] = Convert.ToDouble(ViewData["FR2"].ToString());
-                        RepairLossPerYear[2] = Convert.ToDouble(Convert.ToDouble(ViewData["RL2"].ToString())/100);
+                        RepairLossPerYear[2] = Convert.ToDouble(Convert.ToDouble(ViewData["RL2"].ToString()) / 100);
 
                         break;
                     case 3:
@@ -923,7 +923,7 @@ namespace SireusMvc5.Controllers
                         InstalledBasePerYear[3] = Convert.ToInt32(ViewData["IB3"].ToString());
                         RegionalStocksPerYear[3] = Convert.ToInt32(ViewData["RS3"].ToString());
                         FailureRatePerYear[3] = Convert.ToDouble(ViewData["FR3"].ToString());
-                        RepairLossPerYear[3] = Convert.ToDouble(Convert.ToDouble(ViewData["RL3"].ToString())/100);
+                        RepairLossPerYear[3] = Convert.ToDouble(Convert.ToDouble(ViewData["RL3"].ToString()) / 100);
 
                         break;
                     case 4:
@@ -931,7 +931,7 @@ namespace SireusMvc5.Controllers
                         InstalledBasePerYear[4] = Convert.ToInt32(ViewData["IB4"].ToString());
                         RegionalStocksPerYear[4] = Convert.ToInt32(ViewData["RS4"].ToString());
                         FailureRatePerYear[4] = Convert.ToDouble(ViewData["FR4"].ToString());
-                        RepairLossPerYear[4] = Convert.ToDouble(Convert.ToDouble(ViewData["RL4"].ToString())/100);
+                        RepairLossPerYear[4] = Convert.ToDouble(Convert.ToDouble(ViewData["RL4"].ToString()) / 100);
 
                         break;
                     case 5:
@@ -939,7 +939,7 @@ namespace SireusMvc5.Controllers
                         InstalledBasePerYear[5] = Convert.ToInt32(ViewData["IB5"].ToString());
                         RegionalStocksPerYear[5] = Convert.ToInt32(ViewData["RS5"].ToString());
                         FailureRatePerYear[5] = Convert.ToDouble(ViewData["FR5"].ToString());
-                        RepairLossPerYear[5] = Convert.ToDouble(Convert.ToDouble(ViewData["RL5"].ToString())/100);
+                        RepairLossPerYear[5] = Convert.ToDouble(Convert.ToDouble(ViewData["RL5"].ToString()) / 100);
 
                         break;
                     case 6:
@@ -947,7 +947,7 @@ namespace SireusMvc5.Controllers
                         InstalledBasePerYear[6] = Convert.ToInt32(ViewData["IB6"].ToString());
                         RegionalStocksPerYear[6] = Convert.ToInt32(ViewData["RS6"].ToString());
                         FailureRatePerYear[6] = Convert.ToDouble(ViewData["FR6"].ToString());
-                        RepairLossPerYear[6] = Convert.ToDouble(Convert.ToDouble(ViewData["RL6"].ToString())/100);
+                        RepairLossPerYear[6] = Convert.ToDouble(Convert.ToDouble(ViewData["RL6"].ToString()) / 100);
 
                         break;
                     case 7:
@@ -955,7 +955,7 @@ namespace SireusMvc5.Controllers
                         InstalledBasePerYear[7] = Convert.ToInt32(ViewData["IB7"].ToString());
                         RegionalStocksPerYear[7] = Convert.ToInt32(ViewData["RS7"].ToString());
                         FailureRatePerYear[7] = Convert.ToDouble(ViewData["FR7"].ToString());
-                        RepairLossPerYear[7] = Convert.ToDouble(Convert.ToDouble(ViewData["RL7"].ToString())/100);
+                        RepairLossPerYear[7] = Convert.ToDouble(Convert.ToDouble(ViewData["RL7"].ToString()) / 100);
 
                         break;
                     case 8:
@@ -963,7 +963,7 @@ namespace SireusMvc5.Controllers
                         InstalledBasePerYear[8] = Convert.ToInt32(ViewData["IB8"].ToString());
                         RegionalStocksPerYear[8] = Convert.ToInt32(ViewData["RS8"].ToString());
                         FailureRatePerYear[8] = Convert.ToDouble(ViewData["FR8"].ToString());
-                        RepairLossPerYear[8] = Convert.ToDouble(Convert.ToDouble(ViewData["RL8"].ToString())/100);
+                        RepairLossPerYear[8] = Convert.ToDouble(Convert.ToDouble(ViewData["RL8"].ToString()) / 100);
 
                         break;
                     case 9:
@@ -971,7 +971,7 @@ namespace SireusMvc5.Controllers
                         InstalledBasePerYear[9] = Convert.ToInt32(ViewData["IB9"].ToString());
                         RegionalStocksPerYear[9] = Convert.ToInt32(ViewData["RS9"].ToString());
                         FailureRatePerYear[9] = Convert.ToDouble(ViewData["FR9"].ToString());
-                        RepairLossPerYear[9] = Convert.ToDouble(Convert.ToDouble(ViewData["RL9"].ToString())/100);
+                        RepairLossPerYear[9] = Convert.ToDouble(Convert.ToDouble(ViewData["RL9"].ToString()) / 100);
 
                         break;
                 }
@@ -1480,7 +1480,7 @@ namespace SireusMvc5.Controllers
                 return -1;
             }
 
-            _nbrOfSamples = RoundUpInt(ServiceDays/(double) _leadDays, 0);
+            _nbrOfSamples = RoundUpInt(ServiceDays / (double)_leadDays, 0);
 
             if (!BoundariesOk(ServiceYears))
             {
@@ -1490,7 +1490,7 @@ namespace SireusMvc5.Controllers
 
 
             GetInputData(ServiceYears, ref _confidenceLevelFromNormsInv);
-
+            _ltbChart = new MemoryStream();
             var ltb = new LtbCommon();
             ltb.LtbWorker(_nbrOfSamples,
                 ServiceDays,
@@ -1508,7 +1508,8 @@ namespace SireusMvc5.Controllers
                 FailureRatePerYear,
                 RepairLossPerYear,
                 RegionalStocksPerYear,
-                out _ltbChart);
+                out _ltbChart,
+                Server.MapPath(@"~\Upload"));
 
             ViewData["Stock"] = _stock;
             ViewData["Safety"] = _safety;
@@ -2091,12 +2092,12 @@ namespace SireusMvc5.Controllers
 
         private static bool IsLeapYear(long year)
         {
-            return (year > 0) && (year%4) == 0 && !((year%100) == 0 && (year%400) != 0);
+            return (year > 0) && (year % 4) == 0 && !((year % 100) == 0 && (year % 400) != 0);
         }
 
         private static long CountLeaps(long year)
         {
-            return (year - 1)/4 - (year - 1)/100 + (year - 1)/400;
+            return (year - 1) / 4 - (year - 1) / 100 + (year - 1) / 400;
         }
     }
 }
