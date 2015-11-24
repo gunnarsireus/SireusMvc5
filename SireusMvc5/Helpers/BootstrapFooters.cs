@@ -13,7 +13,7 @@ namespace SireusMvc5.Helpers
                 @"<footer style=""margin-top:60px"">
                     <div class=""container"">
                       <hr />
-                      <p style=""text-align:center"">" + "Sireus Consulting AB" + @"</p>
+                      <p style=""text-align:center"">" + "Siréus Consulting AB" + @"</p>
                       <div id=""progress-indicator"" hidden>
                         <img class=""center-block"" src=""" + img + @""">
                       </div>

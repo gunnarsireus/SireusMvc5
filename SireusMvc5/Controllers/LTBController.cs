@@ -1490,7 +1490,7 @@ namespace SireusMvc5.Controllers
 
 
             GetInputData(ServiceYears, ref _confidenceLevelFromNormsInv);
-            _ltbChart = new MemoryStream();
+
             var ltb = new LtbCommon();
             ltb.LtbWorker(_nbrOfSamples,
                 ServiceDays,
