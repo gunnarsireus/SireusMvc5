@@ -1,5 +1,6 @@
 ﻿//<![CDATA[
-$(document).ready(function() {
+$(document).ready(function () {
+
     var d = new Date();
     var dayNumber = d.getDay() % 12;
     $(".spriteHeader").addClass(GetClass(dayNumber)).css("min-height", "81px").css("background", GetCss("Header", dayNumber));
@@ -14,66 +15,91 @@ $(document).ready(function() {
 });
 
 
+function SetCurrentPageOnHeader(page) {
+
+    switch (page) {
+        case "Home":
+            $("#home").addClass("current");
+            $("#sql").removeClass("current");
+            $("#ltb").removeClass("current");
+            break;
+        case "Sql":
+            $("#sql").addClass("current");
+            $("#home").removeClass("current");
+            $("#ltb").removeClass("current");
+            break;
+        case "Ltb":
+            $("#ltb").addClass("current");
+            $("#sql").removeClass("current");
+            $("#home").removeClass("current");
+            break;
+        default:
+            $("#home").addClass("current");
+            $("#sql").removeClass("current");
+            $("#ltb").removeClass("current");
+    }
+}
+
 function GetClass(dayNumber) {
     switch (dayNumber) {
-    case 0:
-        return "black";
-    case 1:
-        return "blue";
-    case 2:
-        return "bluegreen";
-    case 3:
-        return "bronze";
-    case 4:
-        return "gold";
-    case 5:
-        return "green";
-    case 6:
-        return "red";
-    case 7:
-        return "redgreen";
-    case 8:
-        return "redblue";
-    case 9:
-        return "silver";
-    case 10:
-        return "violet";
-    case 11:
-        return "white";
-    default:
-        return "white";
+        case 0:
+            return "black";
+        case 1:
+            return "blue";
+        case 2:
+            return "bluegreen";
+        case 3:
+            return "bronze";
+        case 4:
+            return "gold";
+        case 5:
+            return "green";
+        case 6:
+            return "red";
+        case 7:
+            return "redgreen";
+        case 8:
+            return "redblue";
+        case 9:
+            return "silver";
+        case 10:
+            return "violet";
+        case 11:
+            return "white";
+        default:
+            return "white";
     }
 };
 
 function GetCss(spriteType, dayNumber) {
 
     switch (dayNumber) {
-    case 0:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 0";
-    case 1:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -81px";
-    case 2:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -162px";
-    case 3:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -243px";
-    case 4:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -324px";
-    case 5:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -405px";
-    case 6:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -486px";
-    case 7:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -567px";
-    case 8:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -648px";
-    case 9:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -729px";
-    case 10:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -810px";
-    case 11:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -891px";
-    default:
-        return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -891px";
+        case 0:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 0";
+        case 1:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -81px";
+        case 2:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -162px";
+        case 3:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -243px";
+        case 4:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -324px";
+        case 5:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -405px";
+        case 6:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -486px";
+        case 7:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -567px";
+        case 8:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -648px";
+        case 9:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -729px";
+        case 10:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -810px";
+        case 11:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -891px";
+        default:
+            return "transparent url('/Content/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -891px";
     }
 };
 
@@ -163,12 +189,12 @@ function are_cookies_enabled() {
 }
 
 function NoFrame() {
-    $("#myframe", function() { $("#myframe", function() { $("#divIframe").html("") }).remove(); }).attr("src", "");
+    $("#myframe", function () { $("#myframe", function () { $("#divIframe").html("") }).remove(); }).attr("src", "");
 };
 
 function AddFrame() {
     var a = "http://9elements.com/io/projects/html5/canvas/";
-    $("#divIframe", function() { $("#myframe", function() { SetPanelHeigthToFitWindow(); }).attr("src", a); }).html("<iframe id='myframe' width='2000px' height='600px'></iframe>");
+    $("#divIframe", function () { $("#myframe", function () { SetPanelHeigthToFitWindow(); }).attr("src", a); }).html("<iframe id='myframe' width='2000px' height='600px'></iframe>");
 };
 
 function ToggleScript() {
@@ -211,21 +237,21 @@ function ShowText(selector, callback) {
 };
 
 function Spinn() {
-    divSwirl.css("visibility", "visible").css("display", "none").toggle("swirl", { spins: 6 }, 1500, function() {
-        ShowText("#divText", function() { ShowText("#divDownload", function() { ShowText("#divContact", function() { runAnimate() }) }) });
+    divSwirl.css("visibility", "visible").css("display", "none").toggle("swirl", { spins: 6 }, 1500, function () {
+        ShowText("#divText", function () { ShowText("#divDownload", function () { ShowText("#divContact", function () { runAnimate() }) }) });
     });
 };
 
-$(window).load(function() {
+$(window).load(function () {
     if ($.cookie("ScriptOn") === "True") {
-        ShowText("#divSwirl", function() { ShowText("#divText", function() { ShowText("#divDownload", function() { ShowText("#divContact", function() { runAnimate() }) }) }) });
+        ShowText("#divSwirl", function () { ShowText("#divText", function () { ShowText("#divDownload", function () { ShowText("#divContact", function () { runAnimate() }) }) }) });
     }
     Spinn();
 });
 
 
 function CheckIB(p) {
-    var GetVal = jQuery.fn.V = function() { return $("#" + p).val(); };
+    var GetVal = jQuery.fn.V = function () { return $("#" + p).val(); };
     var re = new RegExp("^([0]|[1-9][0-9]{0,4}|EoS)$");
     if (!re.test(GetVal())) {
         alert(p + " must be within 0 and 99999!");
@@ -236,7 +262,7 @@ function CheckIB(p) {
 };
 
 function CheckFR(p) {
-    var GetVal = jQuery.fn.V = function() { return $("#" + p).val(); };
+    var GetVal = jQuery.fn.V = function () { return $("#" + p).val(); };
     var re = new RegExp("^([1-9]|[1-9][0-9]|100|[0-9][.,][0-9]{0,4}[1-9])$");
     if (!re.test(GetVal())) {
         alert(p + " must be within 0.00001 and 100!");
@@ -247,7 +273,7 @@ function CheckFR(p) {
 };
 
 function CheckRS(p) {
-    var GetVal = jQuery.fn.V = function() { return $("#" + p).val(); };
+    var GetVal = jQuery.fn.V = function () { return $("#" + p).val(); };
     var re = new RegExp("^([0]|[1-9][0-9]{0,4}|EoS)$");
     if (!re.test(GetVal())) {
         alert(p + " must be within 0 and 9999!");
@@ -258,7 +284,7 @@ function CheckRS(p) {
 };
 
 function CheckRL(p) {
-    var GetVal = jQuery.fn.V = function() { return $("#" + p).val(); };
+    var GetVal = jQuery.fn.V = function () { return $("#" + p).val(); };
     var re = new RegExp("^([0]|[1-9]|[1-9][0-9]|100)$");
     if (!re.test(GetVal())) {
         alert(p + " must be within 0 and 100!");
@@ -269,7 +295,7 @@ function CheckRL(p) {
 };
 
 function Collapse() {
-    $(Content0).slideToggle("slow", function() {
+    $(Content0).slideToggle("slow", function () {
         ChangeText();
         SetPanelHeigthToFitWindow();
     });
