@@ -1,30 +1,16 @@
-@using SireusMvc5.Models
-<script type="text/javascript">
-    $(document).ready(function() {
-        removeIframe();
-    });
+ï»¿@using SireusMvc5.Models
+@section SideBar{
+    <div class="col-md-12">
+        <h4>Arbete med konvertering till Bootstrap pÃ¥gÃ¥r</h4>
+    </div>
+}
 
-    function removeIframe() {
-        fr = document.getElementById("myframe");
-        //fr.src = ""; //clear
-        fr = null; //clear
-        //var d = document.getElementById("myframe");
-        //d.removeChild(document.getElementById("myframe"));
-    };
-</script>
-
-
-<div class="page" id="ltb">
-
-    @section SideBar{
-        <h3>Arbete med konvertering till Bootstrap pågår</h3>
-
-    }
+<div class="col-md-12">
     <div class="buttonbar buttonbar-top">
 
         <a href="/Albums/Index/">
 
-            <img alt="" src="/Content/Images/button-gallery.gif"/>
+            <img alt="" src="/Content/Images/button-gallery.gif" />
         </a>
 
     </div>
@@ -32,7 +18,6 @@
     <table id="DataList1" class="view" cellspacing="0" border="0" style="border-collapse: collapse;">
 
         <tr>
-
             <td class="item"></td>
 
             @{
@@ -50,55 +35,39 @@
 
                             <tr>
 
-                                <td class="topx--">
+                                <td class="topx--"></td>
 
-                                </td>
+                                <td class="top-x-"></td>
 
-                                <td class="top-x-">
-
-                                </td>
-
-                                <td class="top--x">
-
-                                </td>
+                                <td class="top--x"></td>
 
                             </tr>
 
                             <tr>
 
-                                <td class="midx--">
-
-                                </td>
+                                <td class="midx--"></td>
 
                                 <td>
 
                                     <a href='/Details/Index/@ViewBag.PhotoID.ToString()/@ViewBag.AlbumID.ToString()'>
 
                                         <img src="/Handler/Index/PhotoID=@ViewBag.PhotoID.ToString()/Size=S" class="photo_198"
-                                             style="border: 4px solid white" alt='Thumbnail of Photo Number @ViewBag.PhotoID.ToString()'/>
+                                             style="border: 4px solid white" alt='Thumbnail of Photo Number @ViewBag.PhotoID.ToString()' />
                                     </a>
 
                                 </td>
 
-                                <td class="mid--x">
-
-                                </td>
+                                <td class="mid--x"></td>
 
                             </tr>
 
                             <tr>
 
-                                <td class="botx--">
+                                <td class="botx--"></td>
 
-                                </td>
+                                <td class="bot-x-"></td>
 
-                                <td class="bot-x-">
-
-                                </td>
-
-                                <td class="bot--x">
-
-                                </td>
+                                <td class="bot--x"></td>
 
                             </tr>
 
@@ -106,11 +75,12 @@
 
                         <p>
 
-                            @ViewData["Caption"]</p>
+                            @ViewData["Caption"]
+                        </p>
 
                     </td>
                     ViewBag.Counter++;
-                    if (((ViewBag.Counter%4) == 0) && (ViewBag.Counter < PhotoList.Count))
+                    if (((ViewBag.Counter % 4) == 0) && (ViewBag.Counter < PhotoList.Count))
                     {
                         <text> @Html.Raw("</tr><tr><td class='item'></td>") </text>
                     }
@@ -128,9 +98,10 @@
 
         <a href="/Albums/Index/">
 
-            <img alt="" src="/Content/Images/button-gallery.gif" id="gallery"/>
+            <img alt="" src="/Content/Images/button-gallery.gif" id="gallery" />
         </a>
 
     </div>
-
 </div>
+<script src="/Scripts/site.js"></script>
+<script type="text/javascript">SetCurrentPageOnHeader("Home");</script>
