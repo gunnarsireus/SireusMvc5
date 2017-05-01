@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -220,6 +221,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\ColumnsOfSameHeight.css" />
     <Content Include="Content\custom.css" />
+    <Content Include="Content\Default.css" />
+    <Content Include="Content\Frame.css" />
     <Content Include="Content\Images\album-bstretch.gif" />
     <Content Include="Content\Images\album-l1.gif" />
     <Content Include="Content\Images\album-l2.gif" />
@@ -240,6 +243,7 @@
     <Content Include="Content\Images\ASP-NET-Banners-02.png" />
     <Content Include="Content\Images\Banner-01-Azure.png" />
     <Content Include="Content\Images\Banner-02-VS.png" />
+    <Content Include="Content\Images\body-repeat.gif" />
     <Content Include="Content\Images\body-repeat_template.jpg" />
     <Content Include="Content\Images\BootstrapFooterComposed.jpg" />
     <Content Include="Content\Images\BootstrapHeaderComposed.jpg" />
@@ -267,10 +271,25 @@
     <Content Include="Content\Images\button-tog24.gif" />
     <Content Include="Content\Images\button-tog8.gif" />
     <Content Include="Content\Images\favicon.ico" />
+    <Content Include="Content\Images\frame-bot--x.gif" />
+    <Content Include="Content\Images\frame-bot-x-.gif" />
+    <Content Include="Content\Images\frame-botx--.gif" />
+    <Content Include="Content\Images\frame-mid--x.gif" />
+    <Content Include="Content\Images\frame-midx--.gif" />
+    <Content Include="Content\Images\frame-top--x.gif" />
+    <Content Include="Content\Images\frame-top-x-.gif" />
+    <Content Include="Content\Images\frame-topx--.gif" />
     <Content Include="Content\Images\Logo.png" />
     <Content Include="Content\Images\LTB.gif" />
     <Content Include="Content\Images\MCTS.jpg" />
     <Content Include="Content\Images\Menu.png" />
+    <Content Include="Content\Images\photonav-bg.gif" />
+    <Content Include="Content\Images\photonav-top-bg.gif" />
+    <Content Include="Content\Images\placeholder-100.jpg" />
+    <Content Include="Content\Images\placeholder-200.jpg" />
+    <Content Include="Content\Images\placeholder-600.jpg" />
+    <Content Include="Content\Images\resume-photo.jpg" />
+    <Content Include="Content\Images\spacer.gif" />
     <Content Include="Content\Images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\Images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\Images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -442,6 +461,9 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
@@ -462,6 +484,9 @@
           <CustomServerUrl>
           </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="SelfHostServer">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:20705/" workingDir="" />
+          </servers>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

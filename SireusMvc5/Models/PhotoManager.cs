@@ -61,7 +61,7 @@ namespace SireusMvc5.Models
 
         public static Stream GetPhoto(PhotoSize size)
         {
-            var path = HttpContext.Current.Server.MapPath("~/App_Themes/White/Images/");
+            var path = HttpContext.Current.Server.MapPath("~/Content/Images/");
             switch (size)
             {
                 case PhotoSize.Small:

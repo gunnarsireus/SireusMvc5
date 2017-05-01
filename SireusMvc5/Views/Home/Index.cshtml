@@ -6,7 +6,7 @@
 @section SideBar{
 
 
-    <div class="panel panel-primary  center-block">
+    <div class="panel panel-primary center-block">
 
         <div class="panel-heading text-center">
 
@@ -20,12 +20,32 @@
 
                 <div class="span4"></div>
 
-                <div class="span4" id="divSwirl">
-
-                    <a href="/Details/Index/0/0">
-                        <img src="/Handler/Index/PhotoID=0/Size=M" alt="" />
-                    </a>
-
+                <div class="span4" id="divSwirl" align="center">
+                    <table class="photo-frame">
+                        <tr>
+                            <td class="topx--"></td>
+                            <td class="top-x-"></td>
+                            <td class="top--x"></td>
+                        </tr>
+                        <tr>
+                            <td class="midx--"></td>
+                            <td>
+                                <a href="/Details/Index/0/0">
+                                    <img src="/Handler/Index/PhotoID=0/Size=M" alt="" style="border: 4px solid white" />
+                                </a>
+                                @*<a href="/Details/Index/@ViewData["PhotoID"]/@ViewData["AlbumID"]">
+                                    <img src="/Handler/Index/PhotoID=@ViewData["PhotoID"]/Size=@ViewData["Size"]"
+                                         class="photo_198" style="border: 4px solid white" alt='Photo Number 13' />
+                                </a>*@
+                            </td>
+                            <td class="mid--x"></td>
+                        </tr>
+                        <tr>
+                            <td class="botx--"></td>
+                            <td class="bot-x-"></td>
+                            <td class="bot--x"></td>
+                        </tr>
+                    </table>
                 </div>
 
                 <hr />
