@@ -17,10 +17,8 @@
         <div class="panel-body">
 
             <div class="row text-center">
-
-                <div class="span4"></div>
-
-                <div class="span4" id="divSwirl" align="center">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" id="divSwirl">
                     <table class="photo-frame">
                         <tr>
                             <td class="topx--"></td>
@@ -33,10 +31,6 @@
                                 <a href="/Details/Index/0/0">
                                     <img src="/Handler/Index/PhotoID=0/Size=M" alt="" style="border: 4px solid white" />
                                 </a>
-                                @*<a href="/Details/Index/@ViewData["PhotoID"]/@ViewData["AlbumID"]">
-                                    <img src="/Handler/Index/PhotoID=@ViewData["PhotoID"]/Size=@ViewData["Size"]"
-                                         class="photo_198" style="border: 4px solid white" alt='Photo Number 13' />
-                                </a>*@
                             </td>
                             <td class="mid--x"></td>
                         </tr>
@@ -47,42 +41,44 @@
                         </tr>
                     </table>
                 </div>
-
-                <hr />
-
-                <div id="divText" style="visibility: hidden">
-
-                    <p>
-
-                        Bilder tagna av medarbetare p&#229; Sir&#233;us Consulting AB.
-
-                    </p>
-
-                </div>
-
-                <div id="divDownload" style="visibility: hidden;">
-
-                    <p>
-
-                        <a href="/Handler/Download/0/M">
-
-                            <img src="~/Content/Images/button-download.gif" alt="download photo" />
-
-                        </a>
-
-                    </p>
-
+                <div class="col-md-1"></div>
+             </div>
+                <div class="row text-center">
                     <hr />
 
-                    <p>
+                    <div id="divText" style="visibility: hidden">
 
-                        Se <a href="/Albums/Index/">fler bilder</a>
+                        <p>
 
-                    </p>
+                            Bilder tagna av medarbetare p&#229; Sir&#233;us Consulting AB.
+
+                        </p>
+
+                    </div>
+
+                    <div id="divDownload" style="visibility: hidden;">
+
+                        <p>
+
+                            <a href="/Handler/Download/0/M">
+
+                                <img src="~/Content/Images/button-download.gif" alt="download photo" />
+
+                            </a>
+
+                        </p>
+
+                        <hr />
+
+                        <p>
+
+                            Se <a href="/Albums/Index/">fler bilder</a>
+
+                        </p>
+
+                    </div>
 
                 </div>
-
-            </div>
 
         </div>
 
