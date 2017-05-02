@@ -9,8 +9,6 @@
 
 <table border="0" class="album-frame">
     <tr>
-        <td class="item"></td>
-        <td class="item"></td>
         @{
             var AlbumList = new List<Album>();
             AlbumList = PhotoManager.GetAlbums();
@@ -45,7 +43,7 @@
                             <td colspan="3" rowspan="3">
                                 <a href="/Photos/Index/@ViewData["AlbumID"]/@ViewData["Caption"]">
                                     <img src="/Handler/Index/AlbumID=@ViewData["AlbumID"]/Size=M" class="photo_198"
-                                         style="border: 4px solid white" alt="Sample Photo from Album Number @ViewData["AlbumID"]" />
+                                         style="border: 2px solid white" alt="Sample Photo from Album Number @ViewData["AlbumID"]" />
                                 </a>
                             </td>
                             <td class="mtp----x">
@@ -88,7 +86,7 @@
                 ViewBag.Counter++;
                 if (((ViewBag.Counter % 2) == 0) && (ViewBag.Counter < AlbumList.Count))
                 {
-                    <text> @Html.Raw("</tr><tr><td class='item'></td><td class='item'></td>") </text>
+                    <text> @Html.Raw("</tr><tr>") </text>
                 }
             }
         }
