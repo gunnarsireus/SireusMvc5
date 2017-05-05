@@ -7,7 +7,7 @@
 }
 
 
-<table border="0" class="album-frame">
+<table border="0" class="album-frame" style="font-size:10px;font-family: verdana, arial, helvetica, sans-serif">
     <tr>
         @{
             var AlbumList = new List<Album>();
@@ -19,35 +19,35 @@
                 ViewData["Caption"] = album.Caption;
                 ViewData["Count"] = album.Count;
 
-                <td class="item">
-                    <table border="0" cellpadding="0" cellspacing="0" class="album-frame">
+                <td class="item" style="padding: 20px 50px;">
+                    <table border="0" cellpadding="0" cellspacing="0" class="album-frame" style="font-size:10px;font-family: verdana, arial, helvetica, sans-serif">
                         <tr>
                             <td class="topx----">
-                                <img alt="" src="/Content/Images/album-l1.gif" />
+                                <img alt="" src="/Content/Images/album-l1.gif" style="max-height:100%;max-width:100%; vertical-align:top" />
                             </td>
                             <td class="top-x---">
-                                <img alt="" src="/Content/Images/album-mtl.gif" />
+                                <img alt="" src="/Content/Images/album-mtl.gif"  style="max-height:100%;max-width:100%; vertical-align:top" />
                             </td>
                             <td class="top--x--"></td>
                             <td class="top---x-">
-                                <img alt="" src="/Content/Images/album-mtr.gif" />
+                                <img alt="" src="/Content/Images/album-mtr.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
                             </td>
                             <td class="top----x">
-                                <img alt="" src="/Content/Images/album-r1.gif" />
+                                <img alt="" src="/Content/Images/album-r1.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
                             </td>
                         </tr>
                         <tr>
                             <td class="mtpx----">
-                                <img alt="" src="/Content/Images/album-l2.gif" />
+                                <img alt="" src="/Content/Images/album-l2.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
                             </td>
                             <td colspan="3" rowspan="3">
                                 <a href="/Photos/Index/@ViewData["AlbumID"]/@ViewData["Caption"]">
                                     <img src="/Handler/Index/AlbumID=@ViewData["AlbumID"]/Size=M" class="photo_198"
-                                         style="border: 2px solid white" alt="Sample Photo from Album Number @ViewData["AlbumID"]" />
+                                         style="border: 4px solid white; max-height:100%;max-width:100%" alt="Sample Photo from Album Number @ViewData["AlbumID"]" />
                                 </a>
                             </td>
                             <td class="mtp----x">
-                                <img alt="" src="/Content/Images/album-r2.gif" />
+                                <img alt="" src="/Content/Images/album-r2.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
                             </td>
                         </tr>
                         <tr>
@@ -56,25 +56,25 @@
                         </tr>
                         <tr>
                             <td class="mbtx----">
-                                <img alt="" src="/Content/Images/album-l3.gif" />
+                                <img alt="" src="/Content/Images/album-l3.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
                             </td>
                             <td class="mbt----x">
-                                <img alt="" src="/Content/Images/album-r3.gif" />
+                                <img alt="" src="/Content/Images/album-r3.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
                             </td>
                         </tr>
                         <tr>
                             <td class="botx----">
-                                <img alt="" src="/Content/Images/album-l4.gif" />
+                                <img alt="" src="/Content/Images/album-l4.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
                             </td>
                             <td class="bot-x---">
-                                <img alt="" src="/Content/Images/album-mbl.gif" />
+                                <img alt="" src="/Content/Images/album-mbl.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
                             </td>
                             <td class="bot--x--"></td>
                             <td class="bot---x-">
-                                <img alt="" src="/Content/Images/album-mbr.gif" />
+                                <img alt="" src="/Content/Images/album-mbr.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
                             </td>
                             <td class="bot----x">
-                                <img alt="" src="/Content/Images/album-r4.gif" />
+                                <img alt="" src="/Content/Images/album-r4.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
                             </td>
                         </tr>
                     </table>
