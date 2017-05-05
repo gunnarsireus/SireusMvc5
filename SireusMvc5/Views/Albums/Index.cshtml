@@ -20,25 +20,25 @@
                 ViewData["Count"] = album.Count;
 
                 <td class="item" style="padding: 20px 50px;">
-                    <table border="0" cellpadding="0" cellspacing="0" class="album-frame" style="font-size:10px;font-family: verdana, arial, helvetica, sans-serif">
+                    <table border="0" cellpadding="0" cellspacing="0" class="album-frame">
                         <tr>
                             <td class="topx----">
-                                <img alt="" src="/Content/Images/album-l1.gif" style="max-height:100%;max-width:100%; vertical-align:top" />
+                                <img alt="" src="/Content/Images/album-l1.gif" style="max-height:100%;max-width:100%; vertical-align:top;" />
                             </td>
                             <td class="top-x---">
-                                <img alt="" src="/Content/Images/album-mtl.gif"  style="max-height:100%;max-width:100%; vertical-align:top" />
+                                <img alt="" src="/Content/Images/album-mtl.gif"  style="max-height:100%;max-width:100%; vertical-align:top;" />
                             </td>
                             <td class="top--x--"></td>
                             <td class="top---x-">
-                                <img alt="" src="/Content/Images/album-mtr.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
+                                <img alt="" src="/Content/Images/album-mtr.gif"  style="max-height:100%;max-width:100%; vertical-align:top;"/>
                             </td>
                             <td class="top----x">
-                                <img alt="" src="/Content/Images/album-r1.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
+                                <img alt="" src="/Content/Images/album-r1.gif"  style="max-height:100%;max-width:100%; vertical-align:top;"/>
                             </td>
                         </tr>
                         <tr>
                             <td class="mtpx----">
-                                <img alt="" src="/Content/Images/album-l2.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
+                                <img alt="" src="/Content/Images/album-l2.gif"  style="max-height:100%;max-width:100%; vertical-align:top;"/>
                             </td>
                             <td colspan="3" rowspan="3">
                                 <a href="/Photos/Index/@ViewData["AlbumID"]/@ViewData["Caption"]">
@@ -47,7 +47,7 @@
                                 </a>
                             </td>
                             <td class="mtp----x">
-                                <img alt="" src="/Content/Images/album-r2.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
+                                <img alt="" src="/Content/Images/album-r2.gif"  style="max-height:100%;max-width:100%; vertical-align:sub;"/>
                             </td>
                         </tr>
                         <tr>
@@ -56,32 +56,32 @@
                         </tr>
                         <tr>
                             <td class="mbtx----">
-                                <img alt="" src="/Content/Images/album-l3.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
+                                <img alt="" src="/Content/Images/album-l3.gif"  style="max-height:100%;max-width:100%; vertical-align:top;"/>
                             </td>
                             <td class="mbt----x">
-                                <img alt="" src="/Content/Images/album-r3.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
+                                <img alt="" src="/Content/Images/album-r3.gif"  style="max-height:100%;max-width:100%; vertical-align:top;"/>
                             </td>
                         </tr>
                         <tr>
                             <td class="botx----">
-                                <img alt="" src="/Content/Images/album-l4.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
+                                <img alt="" src="/Content/Images/album-l4.gif"  style="max-height:100%;max-width:100%; vertical-align:top;"/>
                             </td>
-                            <td class="bot-x---">
-                                <img alt="" src="/Content/Images/album-mbl.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
+                            <td class="bot-x---" style="text-align:left">
+                                <img alt="" src="/Content/Images/album-mbl.gif"  style="max-height:100%;max-width:100%; vertical-align:top;"/>
                             </td>
                             <td class="bot--x--"></td>
-                            <td class="bot---x-">
-                                <img alt="" src="/Content/Images/album-mbr.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
+                            <td class="bot---x-" style="text-align:right">
+                                <img alt="" src="/Content/Images/album-mbr.gif"  style="vertical-align:bottom; text-align:match-parent"/>&nbsp;&nbsp;
                             </td>
                             <td class="bot----x">
-                                <img alt="" src="/Content/Images/album-r4.gif"  style="max-height:100%;max-width:100%; vertical-align:top"/>
+                                <img alt="" src="/Content/Images/album-r4.gif"  style="max-height:100%;max-width:100%; vertical-align:top;"/>
                             </td>
                         </tr>
                     </table>
                     <h4>
-                        <a href="/Photos/Index/@ViewData["AlbumID"]/@ViewData["Caption"]">@ViewData["Caption"]</a>
+                        <a href="/Photos/Index/@ViewData["AlbumID"]/@ViewData["Caption"]" style="font-family: verdana, arial, helvetica, sans-serif; color:red">@ViewData["Caption"]</a>
                     </h4>
-                    @ViewData["Count"] bilder
+                    <div style="font-family: verdana, arial, helvetica, sans-serif; font-size:10px;">@ViewData["Count"] bilder</div>
                 </td>
                 ViewBag.Counter++;
                 if (((ViewBag.Counter % 2) == 0) && (ViewBag.Counter < AlbumList.Count))
