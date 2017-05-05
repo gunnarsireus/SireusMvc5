@@ -18,7 +18,6 @@
     <table id="DataList1" class="view" cellspacing="0" border="0" style="border-collapse: collapse;">
 
         <tr>
-            <td class="item"></td>
 
             @{
                 var PhotoList = new List<Photo>();
@@ -82,7 +81,7 @@
                     ViewBag.Counter++;
                     if (((ViewBag.Counter % 4) == 0) && (ViewBag.Counter < PhotoList.Count))
                     {
-                        <text> @Html.Raw("</tr><tr><td class='item'></td>") </text>
+                        <text> @Html.Raw("</tr>") </text>
                     }
                 }
             }
