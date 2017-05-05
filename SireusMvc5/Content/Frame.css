@@ -1,5 +1,17 @@
 ﻿/* 0 BASIC TAGS */
 
+h3 {
+	margin-top: 1.0em;
+	margin-bottom: 1.12em;
+	font-weight: bold;
+}
+h4 {
+	margin-top: 1.0em;
+	margin-bottom: 1.12em;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
 table {
 	font-size: 1em;
 }

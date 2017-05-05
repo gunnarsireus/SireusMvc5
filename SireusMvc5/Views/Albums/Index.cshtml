@@ -79,9 +79,9 @@
                         </tr>
                     </table>
                     <h4>
-                        <a href="/Photos/Index/@ViewData["AlbumID"]/@ViewData["Caption"]" style="font-family: verdana, arial, helvetica, sans-serif; color:red">@ViewData["Caption"]</a>
+                        <a href="/Photos/Index/@ViewData["AlbumID"]/@ViewData["Caption"]">@ViewData["Caption"]</a>
                     </h4>
-                    <div style="font-family: verdana, arial, helvetica, sans-serif; font-size:10px;">@ViewData["Count"] bilder</div>
+                    <div>@ViewData["Count"] bilder</div>
                 </td>
                 ViewBag.Counter++;
                 if (((ViewBag.Counter % 2) == 0) && (ViewBag.Counter < AlbumList.Count))
