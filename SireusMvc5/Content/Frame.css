@@ -69,7 +69,7 @@ a:active {
 .view .photo-frame {
 	margin-left: auto;
 	margin-right: auto;
-	border:"0" ;
+    margin: 0 auto;
 }
 
 
@@ -148,6 +148,10 @@ img {
 }
 
 /* Photo Border for All Pages Except the Albums Page */
+
+.photo-frame {
+    margin: 0 auto; /* or margin: 0 auto 0 auto */
+}
 
 .photo-frame .topx-- {
 	background-image: url('./Images/frame-topx--.gif');
